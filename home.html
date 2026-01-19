@@ -1,5 +1,5 @@
-<!Doctype html>
 <html>
+<!Doctype html>
 
 <head>
     <title>Abraham's Portfolio</title>
@@ -9,6 +9,8 @@
     <meta name="author" content="Abraham Ighalo">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel = "icon" type = "image/x-icon" href = "images/Ighalo.png">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -30,8 +32,8 @@
         <main>
             <section class="intro">
                 <h1> Hello, it's Abraham </h1>
-                <h2> I am a Designer and Software Engineer</h2>
-                <input type="button" , value=" Let's Chat" class="button">
+                <i><h2 id = "typed-text"></h2></i>
+                <p><input type="button" , value=" Let's Chat" class="button"></p>
             </section>
 
             <section id="About">
@@ -155,13 +157,17 @@
                 </i>
                 <div class="exp-section">
 
-                    <!-- Fix the class ex-card with Prolang-->
+                
                     <div class="ex-card">
                         <h3>Fraud Detection-Unsupervised ML</h3>
+                         
                         <p>Engineered a scalable unsupervised ML framework comparing four algorithms (Isolation Forest, 
                             One-Class SVM, LOF, DBSCAN) for fraud detection in unlabeled financial data. 
                             Applied rigorous feature engineering, hyperparameter optimization, and statistical validation across multiple evaluation metrics.</p>
-                        <p>Machine-Learning, EDA, Hyperparameter-Tuning, Feature-Engineering, Model-Evaluation, Python</p>
+                        <p>Machine-Learning, EDA, Hyperparameter-Tuning, Feature-Engineering, Model-Evaluation, Python </p>                        
+                        <a href="https://github.com/A-Ighalo/Fraud-Detection-in-Unlabeled-Transaction-Data" target="_blank"><img src = "images/github-logo.svg">
+                        </a>
+                 
                     </div>
 
                     <div class="ex-card">
@@ -170,6 +176,7 @@
                             Liverpool,their matches, club members and overall
                             show loveand support for the club.</p>
                         <p>JavaScript, Php, MYSQL server.</p>
+                        <a href="https://github.com/A-Ighalo" target="_blank"><img src = "images/github-logo.svg"> </a>
                     </div>
 
                     <div class="ex-card">
@@ -178,19 +185,22 @@
                             achieving 98.6% ROC AUC with XGBoost.
                             Engineered features from 284K+ transactions including reward points simulation and time-based patterns</p>
                         <p>Machine-Learning, EDA, Hyperparameter-Tuning, Feature-Engineering, Model-Evaluation, Python</p>
+                        <a href="https://github.com/A-Ighalo/Loyalty-Program-Fraud-Detection-System" target="_blank"><img src = "images/github-logo.svg"> </a>
                     </div>
                     
                     <div class="ex-card">
                         <h3>Quantum Enhanced Crime Prediction</h3>
                         <p> Performed a comparative analysis between Quantum Machine Learning and Classical Machine Learning for crime prediction, presented at 2025 SNPD International Conference</p>
                         <p>Quantum-Machine-Learning, Classical-Machine-Learning, EDA, Hyperparameter-Tuning, Feature-Engineering, Model-Evaluation, Python</p>
-                    </div>
+                        <a href="https://github.com/A-Ighalo/Quantum-Enhanced-Crime-Prediction" target="_blank"><img src = "images/github-logo.svg"> </a>
+                    </div>  
 
                     <div class="ex-card">
                         <h3>Green House Monitoring System Arduino</h3>
                         <p>Detects moisture content in the soil promots the user on the state of the soil.</p>
                         <p>C++, Arduino Microcontroller</p>
-                    </div>
+                        <a href="https://github.com/A-Ighalo/GreenHouse-Monitoring-System-Arduino/blob/main/Soil-Moisture-Arduino.ino" target="_blank"><img src = "images/github-logo.svg"> </a>
+                    </div>  
 
                     <div class="ex-card">
                         <h3>Store Booking System</h3>
@@ -201,6 +211,8 @@
                             system was built using a variety of technologies for frontend and backend development, data
                             storage, API development, user authentication, deployment, and testing.</p>
                         <p> Vue.js, Express.js, Python,PostgreSQL,AWS</p>
+                        <a href="https://github.com/A-Ighalo" target="_blank"><img src = "images/github-logo.svg"> </a>
+
                     </div>
                 </div>
             </section>
@@ -220,6 +232,16 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        var typed = new Typed('#typed-text', {
+            strings: ['Software Engineer', 'Data Professional','Tech Enthusiast', 'Lifelong Learner'],
+            typeSpeed: 90,
+            backSpeed: 70,
+            loop: true,
+            showCursor: true
+        })
+
+    </script>
 </body>
 
 </html>

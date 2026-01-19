@@ -1,12 +1,12 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #333333;
+    background-color: #01182F;
 
 }
 
 header {
-    background-color: #333333;
+    background-color: #01182F;
     display: block;
     padding: 40px;
 
@@ -14,7 +14,7 @@ header {
 
 header a {
 
-    color: #b3afaf;
+    color: #f8dcbf;
     text-decoration: none;
     display: inline;
     /*float:right;*/
@@ -27,23 +27,23 @@ header a {
 }
 
 #About {
-    background-color: #333333;
+    background-color: #01182F;
 }
 
 #About p {
-    color: #b3afaf;
+    color: #f8dcbf;
 }
 
 section {
     padding: 20px;
-    background-color: #333333;
+    background-color: #01182F;
 }
 
 
 section,
 p,
 h1 {
-    color: #b3afaf;
+    color: #f8dcbf;
 }
 
 
@@ -63,17 +63,29 @@ h1 {
 }
 
 
-
-
 .intro h1 {
     font-size: 40px;
 }
 
-
+.intro h2 {
+    display:inline-block;
+    margin:0;
+    padding:0;
+    margin-bottom:0px;
+}
 .intro input:hover {
     background-color: rgb(163, 172, 164);
     opacity: 0.5;
 
+}
+
+.typed-cursor {
+    font-weight: 100px;
+    margin-left: 13px;
+    padding:3px;
+    font-size: 32px;
+    border: 2px solid #f8dcbf;
+    color: #01182F
 }
 
 main {
@@ -111,6 +123,9 @@ main {
     max-width: 50em;
     max-height: 20%;
     padding: 15px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
     text-wrap: balance;
     margin: 4px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -118,6 +133,10 @@ main {
 
 }
 
+.ex-card img{
+    width:50px;
+    height:50px;
+}
 
 footer {
     margin-left: 10%;
@@ -130,7 +149,7 @@ footer {
 
 footer p,footer a {
     text-align: center;
-    color: #b3afaf;
+    color: #f8dcbf;
 }
 
 
