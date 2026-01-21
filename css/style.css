@@ -100,7 +100,7 @@ main {
     /* This removes the default bullets */
 }
 
-.ProgLang li::marker {
+.ProgLang li::before{
 
     font-family: "Font Awesome 6 Free";
     content: "\f0da";
