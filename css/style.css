@@ -105,10 +105,14 @@ main {
     font-family: "Font Awesome 6 Free";
     content: "\f0da";
     font-weight: 900;
+    margin-right: 10px;
+
+    
 }
 
 .ProgLang li {
-    padding-left: 0.5em;
+   /* padding-left: 0.5em; */
+   display:flex;
 }
 
 .exp-section {
