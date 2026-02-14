@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -179,9 +183,73 @@ main {
     background-color: rosybrown;
     font-size: 103%;
     transition: transform 1s;
-    transform: scale(1.05);
-    border-radius:10%;
+    transform: scale(1.00);
+    
 }
+
+
+
+#portfolio-form{
+    /* background-color: #61574c; */
+    text-align: center;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;   /* centers horizontally */
+    align-items: center;       /* centers vertically */
+    /* min-height: 400px;  */
+    
+}
+
+
+
+
+
+.form_class input[type="text"],
+.form_class input[type="email"]{
+   width:400px;
+   height:100px;
+   margin-bottom:20px;
+   display:inline-block;
+   padding:4%;
+   border-radius: 5px;
+}
+
+textarea{
+    text-align:justify; 
+    padding-top: 20px;
+    /* margin-top: 10px; */
+    width:100%;
+    height:200px;
+    display:block;
+
+    /* padding:25% 25% 15% 15%; top right bottom left */
+
+}
+
+
+
+
+input[type = "text"]::placeholder,
+input[type = "email"]::placeholder{
+  text-align: left;
+  font-family:"Verdana, Geneva, Tahoma, sans-serif";
+}
+
+
+input[type = "submit"]{
+  background-color: #f8dcbf;
+  margin-top: 15px;
+  padding:2%;
+  width:200px;
+  cursor:pointer;
+}
+
+input[type = "submit"]:hover{
+  background-color: #231e18;
+  color:white;
+  
+}
+
 
 footer {
     margin-left: 10%;
