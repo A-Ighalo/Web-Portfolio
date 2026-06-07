@@ -38,26 +38,39 @@
     </div>
     <div class="main">
         <main>
-            <section class="intro">
-                
-                <h1> Hello, it's Abraham </h1>
-                <i>
-                    <h2 id="typed-text"></h2>
-                </i>
-                
-                <!-- <p >
-                    <a href = "#portfolio-form" class = "btn slide_v"><span>Let's Chat</a>
-                    
-                </p> -->
-   
-             
-            </section>
+            <section class = "hero-section"> 
 
-            <div class="contain"> 
+                <div class = "ascii-art">
+                    <pre id = "asciiContainer"></pre>
+                </div>
+
+
+                <div class="intro" >
+                    <h1> Hello, it's Abraham </h1>
+                    <i>
+                        <h2 id="typed-text"></h2>
+                    </i>
+
+                    <div class="contain"> 
   
-                <a href="#" class="btn slide_v"><span>Let's Chat</span></a>
+                    <a href="#" onclick = "sendEmail()" class="btn slide_v"><span>Let's Chat</span></a>
                 
-            </div>
+                </div>
+                </div>
+
+                <!-- <div class="contain"> 
+  
+                    <a href="#" onclick = "sendEmail()" class="btn slide_v"><span>Let's Chat</span></a>
+                
+                </div> -->
+            </section>
+             <!-- <div class="contain"> 
+  
+                    <a href="#" onclick = "sendEmail()" class="btn slide_v"><span>Let's Chat</span></a>
+                
+                </div>
+          -->
+            
 
             <section id="About">
                 <i>
@@ -67,9 +80,8 @@
                     I optimize pipelines, detect fraud patterns, and automate the tedious stuff. 
                     Love solving complex problems creatively and collaborating with teams to make data accessible. 
                     Currently at TD Bank, always building.</P>
-                <p>Here are some of the technologies I have been working with
+                <p>Here are some of the technologies I have been working with:
                 </p>
-
                 <ul class="ProgLang">
                     <li><strong>Languages:</strong> Python  SQL Java JavaScript</li>
                     <li><strong>Big Data & ETL:</strong> Apache Spark, Data Factory, Databricks, Airflow</li>
@@ -320,8 +332,65 @@
             })
         });
         sections.forEach(section => observer.observe(section));
-    
 
+
+        //send email to me 
+        function sendEmail(){
+            const email = "abrahamighalo2022@gmail.com"
+            const subject = "Hello";
+
+            window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+
+        }
+        //load the ascii art with my fave 
+//         fetch('images/ascii-art.txt')
+//         .then (response => response.text())
+//         .then(data => {
+//             document.getElementById('asciiContainer').textContent = data;})
+//         .catch(error => console.log('could not load ascii art:', error))
+    
+//         const container = document.getElementById('asciiContainer');
+
+//         fetch('images/ascii-art.txt')
+//         .then(response => {
+//             if (!response.ok) throw response;
+//             return response.text();
+//         })
+//         .then(data => {
+//             const originalText = data;
+//             container.textContent = ''; // Clear before typing
+//             let index = 0;
+//             function typeArt() {
+//             if (index < originalText.length) {
+//                 container.textContent += originalText[index++];
+//                 setTimeout(typeArt, 0.05);
+//             }
+//             }
+//             typeArt();
+//         })
+//   .catch(error => console.log('could not load ascii art:', error));
+
+const container = document.getElementById('asciiContainer');
+
+fetch('images/ascii-art.txt')
+  .then(r => { if (!r.ok) throw r; return r.text(); })
+  .then(text => {
+    container.textContent = '';
+    const len = text.length;
+    const framesToComplete = 200;           // lower = faster (1 = instant)
+    const chunk = Math.max(1, Math.ceil(len / framesToComplete));
+    let i = 0;
+
+    function tick() {
+      const end = Math.min(len, i + chunk);
+      container.textContent += text.slice(i, end);
+      i = end;
+      if (i < len) requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+  })
+  .catch(() => {});
 
 
 
