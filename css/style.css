@@ -106,6 +106,7 @@ h1 {
 
 
 #asciiContainer{
+    padding:2%;
     font-size: 5px;
     cursor: pointer;
     font-style: italic;
