@@ -377,7 +377,7 @@ fetch('images/ascii-art.txt')
   .then(text => {
     container.textContent = '';
     const len = text.length;
-    const framesToComplete = 200;           // lower = faster (1 = instant)
+    const framesToComplete = 200;           
     const chunk = Math.max(1, Math.ceil(len / framesToComplete));
     let i = 0;
 
