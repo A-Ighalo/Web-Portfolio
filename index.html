@@ -32,14 +32,15 @@
     </header>
 
     <div class="hamburger" onclick="myfunction()">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+        <div class="bar1" ></div>
+        <div class="bar2" ></div>
+        <div class="bar3" ></div>
     </div>
     <div class="main">
         <main>
             <section class = "hero-section"> 
-
+               
+               <!-- ascii art -->
                 <div class = "ascii-art">
                     <pre id = "asciiContainer"></pre>
                 </div>
@@ -57,21 +58,7 @@
                 
                 </div>
                 </div>
-
-                <!-- <div class="contain"> 
-  
-                    <a href="#" onclick = "sendEmail()" class="btn slide_v"><span>Let's Chat</span></a>
-                
-                </div> -->
             </section>
-             <!-- <div class="contain"> 
-  
-                    <a href="#" onclick = "sendEmail()" class="btn slide_v"><span>Let's Chat</span></a>
-                
-                </div>
-          -->
-            
-
             <section id="About">
                 <i>
                     <h1># about me</h1>
@@ -260,25 +247,6 @@
                 </div>
             </section>
 
-<!--
-            <section id = "portfolio-form">
-
-                <form class = "form_class"action="" method="post">
-                    <h1> Contact Me</h1>
-                    <p> I always respond to my emails...</p>
-
-                
-                    <input type="text" id="name" name="user_name" placeholder="e.g. Abraham Ighalo" required>
-
-           
-                    <input type="email" id="email" name="user_email" placeholder="e.g. abraham.ighalo@email.com" required>
-                    
-
-                    <textarea id="msg" name="user_message" placeholder="Type your message or project idea here..."></textarea>
-                    <input type = "submit" value = "Message">
-                </form>
-                
-            </section> -->
 
         </main>
     </div>
@@ -342,33 +310,7 @@
             window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
 
         }
-        //load the ascii art with my fave 
-//         fetch('images/ascii-art.txt')
-//         .then (response => response.text())
-//         .then(data => {
-//             document.getElementById('asciiContainer').textContent = data;})
-//         .catch(error => console.log('could not load ascii art:', error))
-    
-//         const container = document.getElementById('asciiContainer');
 
-//         fetch('images/ascii-art.txt')
-//         .then(response => {
-//             if (!response.ok) throw response;
-//             return response.text();
-//         })
-//         .then(data => {
-//             const originalText = data;
-//             container.textContent = ''; // Clear before typing
-//             let index = 0;
-//             function typeArt() {
-//             if (index < originalText.length) {
-//                 container.textContent += originalText[index++];
-//                 setTimeout(typeArt, 0.05);
-//             }
-//             }
-//             typeArt();
-//         })
-//   .catch(error => console.log('could not load ascii art:', error));
 
 const container = document.getElementById('asciiContainer');
 
@@ -391,9 +333,6 @@ fetch('images/ascii-art.txt')
     requestAnimationFrame(tick);
   })
   .catch(() => {});
-
-
-
 
     </script>
 </body>
